@@ -2,9 +2,7 @@ package pages;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import io.appium.java_client.pagefactory.iOSBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.By;
 
 
 public class TestPage extends BasePage {
@@ -32,5 +30,13 @@ public class TestPage extends BasePage {
 
     public void generalHOme() {
         gk_home.click();
+    }
+
+    public void clickOnCategory(String category) {
+        driver.findElement(By.id(category)).click();
+    }
+
+    public void closeCategory(String close) {
+        driver.findElement(By.id(close)).click();
     }
 }

@@ -7,10 +7,14 @@ Feature: Sorolipi Apps mobile home
     When I run some steps
     Then I close the application
 
-    Scenario: I want to run agbum bagdum feature
-      When I click on agdum bagdum and shobdo ghoton
-      And I arranged the word
-      Then I close the shobdo ghoto process
+  Scenario: I want to run agbum bagdum feature
+    When I click on agdum bagdum and shobdo ghoton
+    And I arranged the word
+    Then I close the shobdo ghoto process
+
+  Scenario: I have select different category
+    Then Click on "mojar_chora" item
+    And Close the "close_kobita" category
 
 
 

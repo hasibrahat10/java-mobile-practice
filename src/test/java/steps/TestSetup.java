@@ -24,6 +24,7 @@ public class TestSetup {
             caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
             caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/app/sorolipi.apk");
             caps.setCapability(MobileCapabilityType.FULL_RESET, "true");
+
             caps.setCapability(MobileCapabilityType.NO_RESET, "false");
             Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
