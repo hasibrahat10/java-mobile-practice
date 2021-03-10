@@ -17,9 +17,9 @@ public class TestSetup {
 
     protected static void startDriver() {
         try {
-            caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Samsung Galaxy S8+");
+            caps.setCapability(MobileCapabilityType.DEVICE_NAME, "Redmi 5");
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
-            caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "1200");
+            caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "15000");
             caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, "true");
             caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1.0");
             caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/app/sorolipi.apk");
@@ -28,7 +28,7 @@ public class TestSetup {
             caps.setCapability(MobileCapabilityType.NO_RESET, "false");
             Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
-            driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
