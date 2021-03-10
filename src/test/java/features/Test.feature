@@ -7,7 +7,7 @@ Feature: Sorolipi Apps mobile home
     When I run some steps
     Then I close the application
 
-  Scenario: I want to run agbum bagdum feature
+  Scenario: I want to run agdum bagdum feature
     When I click on agdum bagdum and shobdo ghoton
     And I arranged the word
     Then I close the shobdo ghoto process

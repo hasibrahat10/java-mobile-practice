@@ -21,7 +21,7 @@ public class TestSetup {
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
             caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "1200");
             caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, "true");
-            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
+            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1.0");
             caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/app/sorolipi.apk");
             caps.setCapability(MobileCapabilityType.FULL_RESET, "true");
 
