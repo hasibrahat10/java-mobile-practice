@@ -18,4 +18,6 @@ Mobile automation with java appium webdriver & cucumber
 6. Maven Dependencies need to add in POM file
 
 7. Set the mobile device and check platform version
-8. Be aware about java client compiler and Lamda notation in the project 
+8. Be aware about java client compiler and Lamda notation in the project
+9. Appium session save for differenct device config 
+10. Set the app folder path accurately and check before the run bothe device and app path
