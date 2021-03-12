@@ -50,4 +50,39 @@ public class BornoPoricoiSteps extends TestSetup {
     public void iCloseTheBanjonBornoScreen() {
         new BornoPoricoiPage().setBanjonClose();
     }
+
+    @Then("^I click on likhoni item$")
+    public void iClickOnLikhoniItem() {
+        new BornoPoricoiPage().setLikhoni();
+    }
+
+    @Then("^I click on sorborno text item$")
+    public void iClickOnSorbornoTextItem() {
+        new BornoPoricoiPage().setSorbornoText();
+    }
+
+    @Then("^I have perform sorborno board writting task$")
+    public void iHavePerformSorbornoBoardWrittingTask() {
+        new BornoPoricoiPage().setSorbornoWritingTask();
+    }
+
+    @And("^I close the sorborno likhoni$")
+    public void iCloseTheSorbornoLikhoni() {
+        new BornoPoricoiPage().setCloseSorbornoTask();
+    }
+
+    @Then("^I click on banjon borno text item$")
+    public void iClickOnBanjonBornoTextItem() {
+        new BornoPoricoiPage().setBanjonBornoText();
+    }
+
+    @Then("^I have perform banjon borno board writing$")
+    public void iHavePerformBanjonBornoBoardWriting() {
+        new BornoPoricoiPage().setBanjonBornoWritingTask();
+    }
+
+    @And("^I close the banjon borno likhoni$")
+    public void iCloseTheBanjonBornoLikhoni() {
+        new BornoPoricoiPage().setBanjonBornoTextClose();
+    }
 }

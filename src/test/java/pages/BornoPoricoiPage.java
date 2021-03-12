@@ -36,6 +36,38 @@ public class BornoPoricoiPage extends BasePage {
     @AndroidFindBy(id = "banjon_close")
     public MobileElement banjonClose;
 
+    @AndroidFindBy(id = "likhoni")
+    public MobileElement likhoni;
+
+    @AndroidFindBy(id = "likhoni_soroborno")
+    public MobileElement likhoni_soroborno;
+
+    @AndroidFindBy(id = "write_d")
+    public MobileElement likhoni_word;
+
+    @AndroidFindBy(id = "writting")
+    public MobileElement likhoni_board;
+
+    @AndroidFindBy(id = "rubber_soro")
+    public MobileElement likhoni_rubber;
+
+    @AndroidFindBy(id = "soro_likhoni_close")
+    public MobileElement likhoni_sorbornoClose;
+
+    @AndroidFindBy(id = "likhoni_banjonborno")
+    public MobileElement likhoni_banjonborno;
+
+    @AndroidFindBy(id = "write_a")
+    public MobileElement likhoni_banjonWord;
+
+    @AndroidFindBy(id = "rubber_banjon")
+    public MobileElement likhoni_banjonRubber;
+
+    @AndroidFindBy(id = "ban_likhoni_close")
+    public MobileElement likhoni_banjonClose;
+
+
+
     public void setBornoPoricoi() {
         b_Poricoi.click();
     }
@@ -80,6 +112,45 @@ public class BornoPoricoiPage extends BasePage {
         banjonClose.click();
         sleepForSeconds(2);
     }
+
+    public void setLikhoni(){
+        likhoni.click();
+    }
+
+    public void setSorbornoText(){
+        likhoni_soroborno.click();
+    }
+
+    public void setSorbornoWritingTask(){
+        likhoni_word.click();
+        sleepForSeconds(2);
+        likhoni_board.click();
+        likhoni_rubber.click();
+        sleepForSeconds(4);
+    }
+
+    public void setCloseSorbornoTask(){
+        likhoni_sorbornoClose.click();
+    }
+
+    public void setBanjonBornoText(){
+
+        likhoni_banjonborno.click();
+    }
+
+    public void setBanjonBornoWritingTask(){
+        sleepForSeconds(3);
+        likhoni_banjonWord.click();
+        sleepForSeconds(2);
+        likhoni_board.click();
+        likhoni_banjonRubber.click();
+    }
+
+    public void setBanjonBornoTextClose(){
+        likhoni_banjonClose.click();
+
+    }
+
 
 
 }
