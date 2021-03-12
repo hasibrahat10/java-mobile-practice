@@ -1,7 +1,5 @@
 Feature: Sorolipi Apps mobile home
 
-  Background:
-    Given I am on the home mobile view
 
   Scenario: As a test engineer I want to click an item
     When I run some steps
@@ -15,6 +13,9 @@ Feature: Sorolipi Apps mobile home
   Scenario: I have select different category
     Then Click on "mojar_chora" item
     And Close the "close_kobita" category
+
+
+
 
 
 

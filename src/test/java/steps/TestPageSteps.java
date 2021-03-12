@@ -2,17 +2,11 @@ package steps;
 
 
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.TestPage;
 
 public class TestPageSteps extends TestSetup {
-
-    @Given("^I am on the home mobile view$")
-    public void i_am_on_the_home_mobile_view() {
-
-    }
 
 
     @When("^I run some steps$")
