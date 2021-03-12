@@ -1,5 +1,6 @@
 package steps;
 
+import helper.Constants;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
@@ -12,6 +13,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class TestSetup {
+    protected static String scenarioName;
+    protected static boolean REMOTE_TEST;
     public static AndroidDriver driver;
     private static DesiredCapabilities caps = new DesiredCapabilities();
 
@@ -21,11 +24,13 @@ public class TestSetup {
             caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
             caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "15000");
             caps.setCapability(AndroidMobileCapabilityType.AUTO_GRANT_PERMISSIONS, "true");
-            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "9");
-            caps.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + "/app/sorolipi.apk");
+            caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "");
+            caps.setCapability(MobileCapabilityType.APP, Constants.USER_DIR + "/app/sorolipi.apk");
             caps.setCapability(MobileCapabilityType.FULL_RESET, "true");
 
             caps.setCapability(MobileCapabilityType.NO_RESET, "false");
+            caps.setCapability("name", REMOTE_TEST ? scenarioName : null);
+
             Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
             driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), caps);
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
