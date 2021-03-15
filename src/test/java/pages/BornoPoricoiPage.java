@@ -66,6 +66,33 @@ public class BornoPoricoiPage extends BasePage {
     @AndroidFindBy(id = "ban_likhoni_close")
     public MobileElement likhoni_banjonClose;
 
+    @AndroidFindBy(id = "sorocinho")
+    public MobileElement sorocinnho;
+
+    @AndroidFindBy(id = "sorocinho_sekhi")
+    public MobileElement sorocinnho_sikhi;
+
+    @AndroidFindBy(id = "soro_button_d")
+    public MobileElement sorocinnho_okkhor;
+
+    @AndroidFindBy(id = "sorocinho_board")
+    public MobileElement sorocinnho_board;
+
+    @AndroidFindBy(id = "sorocinho_close")
+    public MobileElement sorocinnho_close;
+
+
+    @AndroidFindBy(id = "sorocinho_pori")
+    public MobileElement sorocinnho_pori;
+
+    @AndroidFindBy(id = "soro_button_cc")
+    public MobileElement sorocinnho_poriWord;
+
+    @AndroidFindBy(id = "sorocinho_exam_board")
+    public MobileElement sorocinnho_poriExamBoard;
+
+    @AndroidFindBy(id = "soro_exam_close")
+    public MobileElement sorocinnho_poriExamClose;
 
 
     public void setBornoPoricoi() {
@@ -113,15 +140,15 @@ public class BornoPoricoiPage extends BasePage {
         sleepForSeconds(2);
     }
 
-    public void setLikhoni(){
+    public void setLikhoni() {
         likhoni.click();
     }
 
-    public void setSorbornoText(){
+    public void setSorbornoText() {
         likhoni_soroborno.click();
     }
 
-    public void setSorbornoWritingTask(){
+    public void setSorbornoWritingTask() {
         likhoni_word.click();
         sleepForSeconds(2);
         likhoni_board.click();
@@ -129,16 +156,16 @@ public class BornoPoricoiPage extends BasePage {
         sleepForSeconds(4);
     }
 
-    public void setCloseSorbornoTask(){
+    public void setCloseSorbornoTask() {
         likhoni_sorbornoClose.click();
     }
 
-    public void setBanjonBornoText(){
+    public void setBanjonBornoText() {
 
         likhoni_banjonborno.click();
     }
 
-    public void setBanjonBornoWritingTask(){
+    public void setBanjonBornoWritingTask() {
         sleepForSeconds(3);
         likhoni_banjonWord.click();
         sleepForSeconds(2);
@@ -146,11 +173,44 @@ public class BornoPoricoiPage extends BasePage {
         likhoni_banjonRubber.click();
     }
 
-    public void setBanjonBornoTextClose(){
+    public void setBanjonBornoTextClose() {
         likhoni_banjonClose.click();
 
     }
 
+    public void setSorocinnho() {
+        sorocinnho.click();
+    }
+
+    public void setSorocinnho_sikhi() {
+        sorocinnho_sikhi.click();
+
+    }
+
+    public void setSorocinnho_sikhiBoard() {
+        sorocinnho_okkhor.click();
+        sleepForSeconds(4);
+        sorocinnho_board.click();
+    }
+
+    public void setSorocinnho_sikhiClose() {
+        sorocinnho_close.click();
+    }
+
+    public void setSorocinnho_Pori() {
+        sorocinnho_pori.click();
+    }
+
+    public void setSorocinnho_poriWordBoard() {
+        sorocinnho_poriWord.click();
+        sleepForSeconds(3);
+        sorocinnho_poriExamBoard.click();
+    }
+
+    public void setSorocinnho_poriExamClose() {
+        sorocinnho_poriExamClose.click();
+        sleepForSeconds(3);
+    }
 
 
 }

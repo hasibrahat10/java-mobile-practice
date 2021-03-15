@@ -16,13 +16,12 @@ Feature: BornoPoricoi Learning Steps
     Then I navigate next and previous screen
     And I close the banjon borno screen
 
-    Scenario: I want to navigate likhoni sorborno features
+  Scenario: I want to navigate likhoni sorborno features
 
-      Then I click on likhoni item
-      Then I click on sorborno text item
-      Then I have perform sorborno board writting task
-      And I close the sorborno likhoni
-
+    Then I click on likhoni item
+    Then I click on sorborno text item
+    Then I have perform sorborno board writting task
+    And I close the sorborno likhoni
 
 
   Scenario: I want to navigate likhoni banjon borno features
@@ -31,6 +30,24 @@ Feature: BornoPoricoi Learning Steps
     Then I click on banjon borno text item
     Then I have perform banjon borno board writing
     And I close the banjon borno likhoni
+
+  Scenario: I want to navigate sorocinnho sikhi features
+    Then I click on sorocinnho item
+    Then I click on sorocinnho sikhi item
+    Then I click on sorocinnho sikhi okkhor and board
+    And I click on sorochinno sikhi close button
+
+  Scenario: I want to navigate sorocinnho  pori features
+    Then I click on sorocinnho item
+    Then I click on sorocinnho pori item
+    Then I click on sorocinnho pori okkhor and board
+    And I click on sorochinno pori close button
+
+
+
+
+
+
 
 
 

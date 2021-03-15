@@ -13,9 +13,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class TestSetup {
+    public static AndroidDriver driver;
     protected static String scenarioName;
     protected static boolean REMOTE_TEST;
-    public static AndroidDriver driver;
     private static DesiredCapabilities caps = new DesiredCapabilities();
 
     protected static void startDriver() {

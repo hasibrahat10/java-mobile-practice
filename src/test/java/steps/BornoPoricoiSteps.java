@@ -85,4 +85,39 @@ public class BornoPoricoiSteps extends TestSetup {
     public void iCloseTheBanjonBornoLikhoni() {
         new BornoPoricoiPage().setBanjonBornoTextClose();
     }
+
+    @Then("^I click on sorocinnho item$")
+    public void iClickOnSorocinnhoItem() {
+        new BornoPoricoiPage().setSorocinnho();
+    }
+
+    @Then("^I click on sorocinnho sikhi item$")
+    public void iClickOnSorocinnhoSikhiItem() {
+        new BornoPoricoiPage().setSorocinnho_sikhi();
+    }
+
+    @Then("^I click on sorocinnho sikhi okkhor and board$")
+    public void iClickOnSorocinnhoSikhiOkkhorAndBoard() {
+        new BornoPoricoiPage().setSorocinnho_sikhiBoard();
+    }
+
+    @And("^I click on sorochinno sikhi close button$")
+    public void iClickOnSorochinnoSikhiCloseButton() {
+        new BornoPoricoiPage().setSorocinnho_sikhiClose();
+    }
+
+    @Then("^I click on sorocinnho pori item$")
+    public void iClickOnSorocinnhoPoriItem() {
+        new BornoPoricoiPage().setSorocinnho_Pori();
+    }
+
+    @Then("^I click on sorocinnho pori okkhor and board$")
+    public void iClickOnSorocinnhoPoriOkkhorAndBoard() {
+        new BornoPoricoiPage().setSorocinnho_poriWordBoard();
+    }
+
+    @And("^I click on sorochinno pori close button$")
+    public void iClickOnSorochinnoPoriCloseButton() {
+        new BornoPoricoiPage().setSorocinnho_poriExamClose();
+    }
 }
