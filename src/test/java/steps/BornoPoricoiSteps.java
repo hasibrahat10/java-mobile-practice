@@ -120,4 +120,6 @@ public class BornoPoricoiSteps extends TestSetup {
     public void iClickOnSorochinnoPoriCloseButton() {
         new BornoPoricoiPage().setSorocinnho_poriExamClose();
     }
+
+
 }
