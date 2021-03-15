@@ -91,6 +91,24 @@ public class BasePage extends TestSetup {
         return patientlyScroll(elm, 5);
     }
 
+    public void patientlyScrollMobile(String selectorType, String selectorValue, int count) {
+        String elementXpath = "";
+        if(selectorType.equals("text")){
+            elementXpath = "//*[contains(@text,'"+selectorValue+"')]";
+        } else{
+            elementXpath = "//*[@"+selectorType+"='"+selectorValue+"')]";
+        }
+        for (int i = 0; i < count; i++) {
+            try {
+                if(driver.findElement(By.xpath(elementXpath)).isDisplayed()){
+                    break;
+                }
+            } catch (org.openqa.selenium.NoSuchElementException e) {
+                swipeUp();
+            }
+        }
+    }
+
     public WebElement patientlyScroll(WebElement elm, int count) {
         for (int i = 0; i < count; i++) {
             try {
