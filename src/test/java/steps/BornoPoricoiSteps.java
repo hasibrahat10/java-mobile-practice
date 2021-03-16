@@ -3,6 +3,7 @@ package steps;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import pages.BornoPoricoiPage;
 
 public class BornoPoricoiSteps extends TestSetup {
@@ -120,6 +121,7 @@ public class BornoPoricoiSteps extends TestSetup {
     public void iClickOnSorochinnoPoriCloseButton() {
         new BornoPoricoiPage().setSorocinnho_poriExamClose();
     }
+
 
 
 }

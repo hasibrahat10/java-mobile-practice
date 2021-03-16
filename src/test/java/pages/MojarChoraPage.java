@@ -11,7 +11,11 @@ public class MojarChoraPage extends BasePage{
     @AndroidFindBy(id = "next_kobite")
     public MobileElement choraNext;
 
-    
+
+
+    public void setCategoryMojarChora(){
+        categoryMojarChora.click();
+    }
 
 
 
