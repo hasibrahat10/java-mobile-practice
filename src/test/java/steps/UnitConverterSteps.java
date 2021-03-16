@@ -1,7 +1,9 @@
 package steps;
 
-import cucumber.api.java.en.*;
-
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import pages.UnitConverterPage;
 
 
@@ -20,16 +22,24 @@ public class UnitConverterSteps extends TestSetup {
         new UnitConverterPage().setCategoryLength();
     }
 
+    @And("^I have enter the conversion entry as \"([^\"]*)\"$")
+    public void iHaveEnterTheConversionEntryAs(String SelectorValue) {
 
-    @And("^I have enter the conversion entry$")
-    public void iHaveEnterTheConversionEntry() {
-        new UnitConverterPage().setConvertEntry();
+        new UnitConverterPage().entryConversionValue(SelectorValue);
+
+    }
+
+    @Then("^I have enter the conversion value as \"([^\"]*)\"$")
+    public void iHaveEnterTheConversionValueAs(String entryValue)  {
+        new UnitConverterPage().enterValue(entryValue);
+
     }
 
     @Then("^I clear the result$")
     public void iClearTheResult() {
         new UnitConverterPage().setClearText();
     }
+
 
 
 }

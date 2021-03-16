@@ -92,15 +92,17 @@ public class BasePage extends TestSetup {
     }
 
     public void patientlyScrollMobile(String selectorType, String selectorValue, int count) {
+
+        for(int j =0; j<count; j++){ swipeDown();}
         String elementXpath = "";
-        if(selectorType.equals("text")){
-            elementXpath = "//*[contains(@text,'"+selectorValue+"')]";
-        } else{
-            elementXpath = "//*[@"+selectorType+"='"+selectorValue+"')]";
+        if (selectorType.equals("text")) {
+            elementXpath = "//*[contains(@text,'" + selectorValue + "')]";
+        } else {
+            elementXpath = "//*[@" + selectorType + "='" + selectorValue + "')]";
         }
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < (count*2); i++) {
             try {
-                if(driver.findElement(By.xpath(elementXpath)).isDisplayed()){
+                if (driver.findElement(By.xpath(elementXpath)).isDisplayed()) {
                     break;
                 }
             } catch (org.openqa.selenium.NoSuchElementException e) {

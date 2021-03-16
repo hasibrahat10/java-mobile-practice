@@ -2,6 +2,7 @@ package pages;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
+import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.Select;
 
 public class UnitConverterPage extends BasePage {
@@ -22,30 +23,50 @@ public class UnitConverterPage extends BasePage {
     @AndroidFindBy(xpath = "//*[contains(@text, '5')]")
     public MobileElement convertValue;
 
+    @AndroidFindBy(id = "img_switch")
+    public MobileElement switchConversion;
+
+
     @AndroidFindBy(xpath = "//*[contains(@text, 'C')]")
     public MobileElement clearText;
 
-    public void setNavigationDrawer(){
+    public void setNavigationDrawer() {
         navigationDrawer.click();
     }
 
-    public void setCategoryLength(){
+    public void setCategoryLength() {
         categoryLength.click();
     }
 
-    public void setConvertEntry(){
 
-        Select givenValue = new Select(selectDropDown);
-        givenValue.selectByVisibleText("Mile");
-        swipeUp();
-        Select expectValue = new Select(expectDropDown);
-        expectValue.selectByVisibleText("Kilometer");
-        sleepForSeconds(3);
-        convertValue.click();
-        sleepForSeconds(5);
+
+    public void entryConversionValue(String SelectorValue) {
+        selectDropDown.click();
+        patientlyScrollMobile("text", SelectorValue, 5);
+        clickElementByText(SelectorValue);
+        switchConversion.click();
     }
 
-    public void setClearText(){
+    public void clickElementByText(String value) {
+        driver.findElement(By.xpath("//*[contains(@text,'" + value + "')]")).click();
+
+    }
+
+    public  void entryKeyValues(String keyValue){
+        driver.findElement(By.xpath("//*[contains(@text,'" + keyValue + "')]")).click();
+
+    }
+
+
+    public void enterValue(String value){
+        String[] values = value.split("");
+        for(int i=0; i<value.length(); i++){
+            driver.findElement(By.xpath("//android.widget.Button[@text='"+values[i]+"']")).click();
+        }
+    }
+
+
+    public void setClearText() {
         clearText.click();
     }
 
